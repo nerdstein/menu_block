@@ -1,0 +1,27 @@
+menu_block.menu_block.*:
+  type: config_entity
+  label: 'MenuBlock config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    menu:
+      type: system.menu.[id]
+      label: 'Menu'
+    block_title:
+      type: string
+      label: 'Block Title'
+    admin_block_title:
+      type: string
+      label: 'Administrative Title'
+    starting_level:
+      type: int
+      label: 'Starting Levels'
+    maximum_depth:
+      type: int
+      label: 'Maximum Depth'

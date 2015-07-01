@@ -1,0 +1,6 @@
+entity.menu_block.add_form:
+  route_name: 'entity.menu_block.add_form'
+  title: 'Add MenuBlock'
+  appears_on:
+    - entity.menu_block.collection
+

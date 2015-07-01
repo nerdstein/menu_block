@@ -1,0 +1,34 @@
+
+# MenuBlock routing definition
+entity.menu_block.collection:
+  path: '/admin/config/system/menu_block'
+  defaults:
+    _entity_list: 'menu_block'
+    _title: 'MenuBlock Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.menu_block.add_form:
+  path: '/admin/config/system/menu_block/add'
+  defaults:
+    _entity_form: 'menu_block.add'
+    _title: 'Add MenuBlock'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.menu_block.edit_form:
+  path: '/admin/config/system/menu_block/{menu_block}'
+  defaults:
+    _entity_form: 'menu_block.edit'
+    _title: 'Edit MenuBlock'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.menu_block.delete_form:
+  path: '/admin/config/system/menu_block/{menu_block}/delete'
+  defaults:
+    _entity_form: 'menu_block.delete'
+    _title: 'Delete MenuBlock'
+  requirements:
+    _permission: 'administer site configuration'
+

@@ -1,0 +1,7 @@
+# MenuBlock menu items definition
+entity.menu_block.collection:
+  title: 'MenuBlock'
+  route_name: entity.menu_block.collection
+  description: 'List MenuBlock'
+  parent: system.admin_structure
+

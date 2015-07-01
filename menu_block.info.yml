@@ -1,0 +1,6 @@
+name: Menu Block
+type: module
+description: Create blocks that contain one or more levels of a menu
+core: 8.x
+package: Other
+
