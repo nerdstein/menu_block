@@ -15,6 +15,7 @@ use Drupal\Core\Block\BlockBase;
  * @Block(
  *  id = "menu_block",
  *  admin_label = @Translation("menu_block"),
+ *  category = @Translation("Menus"),
  *  deriver = "Drupal\menu_block\Plugin\Derivative\MenuBlock"
  * )
  */

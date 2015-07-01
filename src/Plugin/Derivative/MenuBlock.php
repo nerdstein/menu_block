@@ -7,6 +7,7 @@
 
 namespace Drupal\menu_block\Plugin\Derivative;
 
+use Drupal\Component\Plugin\Derivative\DeriverBase;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -16,21 +17,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * @see \Drupal\menu_block\Plugin\block\MenuBlock
  */
-class MenuBlock implements ContainerDeriverInterface {
-
-  /**
-   * List of derivative definitions.
-   *
-   * @var array
-   */
-  protected $derivatives = array();
-
-  /**
-   * The base plugin ID.
-   *
-   * @var string
-   */
-  protected $basePluginId;
+class MenuBlock extends DeriverBase implements ContainerDeriverInterface {
 
   /**
    * The menu block storage.
@@ -44,7 +31,6 @@ class MenuBlock implements ContainerDeriverInterface {
    */
   public static function create(ContainerInterface $container, $base_plugin_id) {
     return new static(
-      $base_plugin_id,
       $container->get('entity.manager')->getStorage('menu_block')
     );
   }
@@ -57,8 +43,7 @@ class MenuBlock implements ContainerDeriverInterface {
    * @param \Drupal\Core\Entity\EntityStorageInterface $menu_block_storage
    *   The entity storage to load menu blocks.
    */
-  public function __construct($base_plugin_id, EntityStorageInterface $menu_block_storage) {
-    $this->basePluginId = $base_plugin_id;
+  public function __construct(EntityStorageInterface $menu_block_storage) {
     $this->menuBlockStorage = $menu_block_storage;
   }
 
